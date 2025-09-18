@@ -127,6 +127,7 @@ export class ArticlesCreateUiComponent {
         this.formChange.emit(false);
         this.articleFacade.editArticle(article, this.vm.editingArticle!.id);
       } else {
+        this.articleFacade.publishArticle(article);
         this.router.navigate(['/articles']);
       }
       console.log(article);

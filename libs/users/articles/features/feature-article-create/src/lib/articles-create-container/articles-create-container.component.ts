@@ -45,7 +45,7 @@ export class ArticlesCreateContainerComponent implements DeactivatableComponent 
   }
 
   canDeactivate(): Observable<boolean> {
-    if (!this.isFormChanged) {
+    if (!this.isFormChanged || !Number(this.articleId)) {
       return of(true);
     }
 
